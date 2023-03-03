@@ -1,7 +1,106 @@
 #include <conio.h>;
 #include<iostream>;
 #include<string>;
+#include<vector>;					//vectors are in the header files so we need include statement
 using namespace std;
+
+
+
+//struct for vectors func below
+struct Person {
+
+	string name;
+	int age;
+};
+
+//vectors
+void Vectors()
+{
+	char input = 'y';
+	Person person;
+
+	//like lists in C#, vectors need to know the data type they hold, so we use <>. In this case, a vector of People structs.		
+	vector<Person> people;       //vectors are like arrays but we can dynamically increase the size of the array
+
+	
+	//while user requests to create another person
+	while (input == 'y')
+	{
+		cout << "Name: ";
+		cin >> person.name;  //let user store their name
+
+		cout << "Age: ";
+		cin >> person.age;	//let user store their age
+		
+		
+		//push_back is a native C++ library method to add an element to the end of a vector
+		people.push_back(person);  //add the user created Person struct to the people vector, as many times as the user wants. 
+								   //This would not be possible with array, because compiler needs to know array size at runtime.
+		
+		
+		
+		cout << "Would you like to add another person? (y/n): ";
+	}
+
+
+
+//ITERATE THROUGH THE VECTOR!!!
+
+	//slow/bad but Easier WAY		     //.size() is native method that returns number of elements
+	for (int i = 0; i < people.size(); i++) {  
+		
+		cout << people[i].name << " is " << people[i].age << " years old! \n "; //using people[i] is SLOW, because math needs to be done to find each value
+	}
+
+
+	//better/more difficult way!
+	vector<Person>::iterator it;  // 'it' is the name of the iterator variable
+	
+	for (it = people.begin(); it != people.end(); it++) {
+		
+		cout << it->name << "\n";
+	}
+
+}
+
+
+//multi-dimensional arrays
+void ArrayOfArrays()
+{                  
+	char checkers[8][8] = {
+
+		{ ' ', 'W', ' ', 'W', ' ', 'W', ' ', 'W' },   //checkers holds 8 arrays, which each hold 8 elements
+		{ 'W', ' ', 'W', ' ', 'W', ' ', 'W', ' ' },
+		{ ' ', 'W', ' ', 'W', ' ', 'W', ' ', 'x' },
+		{ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+		{ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+		{ 'B', ' ', 'B', ' ', 'B', ' ', 'B', ' ' },
+		{ ' ', 'B', ' ', 'B', ' ', 'B', ' ', 'B' },
+		{ 'B', ' ', 'B', ' ', 'B', ' ', 'B', ' ' }
+	};
+
+	for (int y = 0; y < 8; y++)
+	{
+		for (int x = 0; x < 8; x++)
+		{
+			cout << checkers[y][x] << " ";
+		}
+		cout << "\n";
+	}
+
+}
+
+
+//character arrays
+void charArray()
+{
+	//this would error if there was no space in the array for the compiler to add a '\0' escape character, 
+	//but since the array holds 5 elements and only sets 4, the compiler is able to add the escape character to the last unfilled spot
+	char name[5] = { 'E', 'K', 'C', 'A' };
+
+	cout << name; cout << "\n";
+}
+
 
 //arrays and dynamic memory storage of values
 void ArrayOnHeap()
@@ -104,6 +203,15 @@ int main()
 
 	//arrays and memory
 	ArrayOnHeap();
+
+	//character arrays and null chars
+	charArray(); 
+
+	//multi-dimensional arrays
+	ArrayOfArrays();
+
+	//vectors
+	Vectors();
 
 	_getch();
 	return 0;
