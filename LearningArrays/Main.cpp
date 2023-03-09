@@ -19,7 +19,7 @@ void Vectors()
 	char input = 'y';
 	Person person;
 
-	//like lists in C#, vectors need to know the data type they hold, so we use <>. In this case, a vector of People structs.		
+	//like lists in C#, vectors need to know the data type they hold, so we use <>. In this case, a vector of People structs called people.		
 	vector<Person> people;       //vectors are like arrays but we can dynamically increase the size of the array
 
 	

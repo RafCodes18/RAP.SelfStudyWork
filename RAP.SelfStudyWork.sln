@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RAP.LearningPointers", "RAP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LearningArrays", "LearningArrays\LearningArrays.vcxproj", "{A8AC9CD2-07B4-41CC-BA88-26E97F1E1ECB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LearningFileIO", "LearningFileIO\LearningFileIO.vcxproj", "{F31BB649-18BE-4A95-915D-60F1539913AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{A8AC9CD2-07B4-41CC-BA88-26E97F1E1ECB}.Release|x64.Build.0 = Release|x64
 		{A8AC9CD2-07B4-41CC-BA88-26E97F1E1ECB}.Release|x86.ActiveCfg = Release|Win32
 		{A8AC9CD2-07B4-41CC-BA88-26E97F1E1ECB}.Release|x86.Build.0 = Release|Win32
+		{F31BB649-18BE-4A95-915D-60F1539913AE}.Debug|x64.ActiveCfg = Debug|x64
+		{F31BB649-18BE-4A95-915D-60F1539913AE}.Debug|x64.Build.0 = Debug|x64
+		{F31BB649-18BE-4A95-915D-60F1539913AE}.Debug|x86.ActiveCfg = Debug|Win32
+		{F31BB649-18BE-4A95-915D-60F1539913AE}.Debug|x86.Build.0 = Debug|Win32
+		{F31BB649-18BE-4A95-915D-60F1539913AE}.Release|x64.ActiveCfg = Release|x64
+		{F31BB649-18BE-4A95-915D-60F1539913AE}.Release|x64.Build.0 = Release|x64
+		{F31BB649-18BE-4A95-915D-60F1539913AE}.Release|x86.ActiveCfg = Release|Win32
+		{F31BB649-18BE-4A95-915D-60F1539913AE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
